@@ -25,4 +25,14 @@ export class AppComponent {
   get email() { return this.reactiveForm.get('email'); }
 
   get password() { return this.reactiveForm.get('password'); }
+
+  submit(event: Event){
+    event.preventDefault()
+    if (this.reactiveForm.valid == true){
+      alert("Form Submitted Successfully")
+    }
+    else{
+      alert("Ooops! fill in the fields carefully")
+    }
+  }
  }

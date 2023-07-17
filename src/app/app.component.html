@@ -1,4 +1,4 @@
-<form [formGroup]="reactiveForm">
+<form [formGroup]="reactiveForm" (ngSubmit) = "submit($event)">
   <!-- Email input area -->
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
@@ -35,6 +35,6 @@
 
   </div>
 <!-- Submit Button -->
-  <button type="submit" class="btn btn-primary" [disabled]="!reactiveForm.valid" style="margin-left:45%">Submit</button>
+  <button type="submit" class="btn btn-primary" style="margin-left:45%">Submit</button>
 
 </form>
